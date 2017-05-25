@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Strona logowania</title>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body class="form_page">
+<div class="container">
+    <div class="row centered-form">
+        <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Zaloguj się!</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="login_options">
+                        <input type="button" value="ZALOGUJ PRZEZ FACEBOOK" class="btn btn-info btn-block">
+                        <input type="button" value="ZALOGUJ PRZEZ GMAIL" class="btn btn-info btn-block">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 col-md-offset-5">lub</div>
+                    </div>
+                    <form role="form" class="login_form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon glyphicon glyphicon-user"></span>
+                                <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Adres email">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon glyphicon glyphicon-lock"></span>
+                                <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Hasło">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div><span><input type="checkbox"> Zapamiętaj</span></div>
+                            </div>
+                            <div class="col-md-6">
+                                <input value="Zaloguj" onclick="window.location = 'index.html'" class="btn btn-info btn-block pull-right">
+                            </div>
+                        </div>
+                        <div class="login_options">
+                            <div class="row">
+                                <div class="col-md-6 col-md-offset-3">
+                                    <a href="register.html">Nie pamiętasz hasła?</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-2">
+                                    <span>Nie masz konta?</span><a href="register.html"> Zarejestruj się!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

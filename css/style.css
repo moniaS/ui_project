@@ -1,0 +1,125 @@
+/*******************LOGIN FORM*************************/
+.form_page {
+    background-color: #525252;
+    font-family: 'Roboto', sans-serif;
+}
+.centered-form{
+    margin-top: 60px;
+}
+
+.centered-form .panel{
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+
+.login_form .glyphicon {
+    top: 0;
+}
+
+.login_form {
+    font-size: 14px;
+}
+.login_options {
+    margin: 15px 0;
+}
+
+.login_form .form-group {
+    margin-top: 10px;
+}
+/*******************HOMEPAGE*************************/
+.navbar-header {
+    padding: 10px 0;
+}
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: 450px}
+
+/* Set gray background color and 100% height */
+.sidenav {
+    padding-top: 20px;
+    background-color: #f1f1f1;
+    height: 100%;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+    .row.content {height:auto;}
+}
+
+.stylish-input-group .input-group-addon{
+    background: white !important;
+}
+.stylish-input-group .form-control{
+    border-right:0;
+    box-shadow:0 0 0;
+    border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
+.list-group-sidebar, .sidenav {
+    background: white;
+    height: 530px;
+    border-radius: 3px;
+    -moz-box-shadow: 0 0 10px gray;
+    -webkit-box-shadow: 0 0 10px gray;
+    box-shadow: 0 0 10px gray;
+    text-align: left;
+}
+
+.list-group-sidebar h3 {
+    background: #525252;
+    color: white;
+    padding: 10px;
+    border-radius: inherit;
+}
+
+.list-group-sidebar ul a {
+    color: inherit;
+}
+
+.add-group-btn {
+    position: absolute;
+    bottom: 0;
+    right: 35%;
+    color: #777;
+}
+.add-group-btn:hover {
+    cursor: pointer;
+}
+.sidenav {
+    margin-top: 20px;
+}
+
+.username-btn {
+    background: inherit;
+    border: none;
+    box-shadow: none;
+}
+
+.username-btn:hover {
+    background: none !important;
+}
+
+body {
+    background: #f1f1f1;
+    font-family: 'Roboto', sans-serif;
+}
