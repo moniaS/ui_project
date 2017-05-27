@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Strona główna</title>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
     <script src="../js/jquery-3.2.1.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -11,6 +13,7 @@
     <!-- Latest compiled and minified JavaScript -->
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
@@ -61,42 +64,42 @@
                         <ul class="nav sidebar-nav">
                         <li>
                             <a href="#">
-                                <i class="sidebar-icon md-inbox"></i>
+                                <i class="fa fa-users"></i>
                                 Sieciowe Systemy Baz Danych
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <i class="sidebar-icon md-star"></i>
+                                <i class="fa fa-users"></i>
                                 Kryptografia
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <i class="sidebar-icon md-send"></i>
+                                <i class="fa fa-users"></i>
                                 Matematyka I
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <i class="sidebar-icon md-drafts"></i>
+                                <i class="fa fa-users"></i>
                                 Interfejsy
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <i class="sidebar-icon md-drafts"></i>
-                               Grafika
+                                <i class="fa fa-users"></i>
+                                Grafika
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <i class="sidebar-icon md-drafts"></i>
+                                <i class="fa fa-users"></i>
                                 Numerki
                             </a>
                         </li>
                         </ul>
-                        <a class="add-group-btn">+ Dodaj grupę</a>
+                        <a class="add-group-btn" data-toggle="modal" data-target="#add_new_group_modal">+ Dodaj grupę</a>
                     </div>
                 </div>
                 <div class="col-sm-6 text-left">
@@ -112,6 +115,38 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<div id="add_new_group_modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Dodaj nową grupę</h4>
+            </div>
+            <div class="modal-body">
+                <input id="group_name" class="form-control" type="text" placeholder="Nazwa grupy *"/>
+                <div class="input-group">
+                <span class="input-group-btn">
+                    <span class="btn btn-primary btn-file">
+                        Wybierz ikonę&hellip; <input type="file" single id="group_icon_name">
+                    </span>
+                </span>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="row">
+                    <div class="col-md-2 col-md-offset-5">lub</div>
+                </div>
+                <input id="short_group_name" type="text" class="form-control" placeholder="Skrócona nazwa grupy" maxlength="3"/>
+                <i>Ikona zostanie stworzona ze skrótu nazwy</i>
+                <br>
+            </div>
+            <div class="modal-footer">
+                <input type="button" class="btn btn-primary" value="Dodaj" id="confirm_new_group_btn" data-dismiss="modal">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
+            </div>
+        </div>
+
     </div>
 </div>
 

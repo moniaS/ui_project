@@ -26,24 +26,40 @@
 .login_form .form-group {
     margin-top: 10px;
 }
-/*******************HOMEPAGE*************************/
-.navbar-header {
-    padding: 10px 0;
+/*******************NEW GROUP MODAL*********************/
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
 }
-/* Remove the navbar's default margin-bottom and rounded borders */
-.navbar {
-    margin-bottom: 0;
-    border-radius: 0;
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    background: red;
+    cursor: inherit;
+    display: block;
 }
 
-/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-.row.content {height: 450px}
+.group-img {
+    width: 14px;
+}
 
-/* Set gray background color and 100% height */
-.sidenav {
-    padding-top: 20px;
-    background-color: #f1f1f1;
-    height: 100%;
+.input-group {
+    margin-top: 5px;
+}
+
+/*******************PAGE TEMPLATE - NAVBAR, LEFT/RIGHT SIDEBAR, FOOTER*************************/
+
+body {
+    background: #f1f1f1;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Set black background color, white text and some padding */
@@ -62,19 +78,9 @@ footer {
     .row.content {height:auto;}
 }
 
-.stylish-input-group .input-group-addon{
-    background: white !important;
-}
-.stylish-input-group .form-control{
-    border-right:0;
-    box-shadow:0 0 0;
-    border-color:#ccc;
-}
-.stylish-input-group button{
-    border:0;
-    background:transparent;
-}
+.row.content {height: 450px}
 
+/*LEFT SIDEBAR*/
 .list-group-sidebar, .sidenav {
     background: white;
     height: 530px;
@@ -109,6 +115,28 @@ footer {
     margin-top: 20px;
 }
 
+/*NAVBAR*/
+.navbar-header {
+    padding: 10px 0;
+}
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.stylish-input-group .input-group-addon{
+    background: white !important;
+}
+.stylish-input-group .form-control{
+    border-right:0;
+    box-shadow:0 0 0;
+    border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
 .username-btn {
     background: inherit;
     border: none;
@@ -117,9 +145,4 @@ footer {
 
 .username-btn:hover {
     background: none !important;
-}
-
-body {
-    background: #f1f1f1;
-    font-family: 'Roboto', sans-serif;
 }
