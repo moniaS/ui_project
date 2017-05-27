@@ -13,7 +13,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
-<body class="form_page">
+<body class="form-page">
 <div class="container">
     <div class="row centered-form">
         <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
@@ -22,14 +22,14 @@
                     <h3 class="panel-title">Zaloguj się!</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="login_options">
+                    <div class="login-options">
                         <input type="button" value="ZALOGUJ PRZEZ FACEBOOK" class="btn btn-info btn-block">
                         <input type="button" value="ZALOGUJ PRZEZ GMAIL" class="btn btn-info btn-block">
                     </div>
                     <div class="row">
                         <div class="col-md-2 col-md-offset-5">lub</div>
                     </div>
-                    <form role="form" class="login_form">
+                    <form role="form" class="login-form">
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon glyphicon glyphicon-user"></span>
@@ -42,13 +42,17 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <div><span><input type="checkbox"> Zapamiętaj</span></div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"> Zapamiętaj
+                                    </label>
+                                </div>
                             </div>
                             <div class="col-md-6">
                                 <input value="Zaloguj" onclick="window.location = 'index.html'" class="btn btn-info btn-block pull-right">
                             </div>
                         </div>
-                        <div class="login_options">
+                        <div class="login-options">
                             <div class="row">
                                 <div class="col-md-6 col-md-offset-3">
                                     <a href="register.html">Nie pamiętasz hasła?</a>

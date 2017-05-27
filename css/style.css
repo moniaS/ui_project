@@ -1,5 +1,5 @@
 /*******************LOGIN FORM*************************/
-.form_page {
+.form-page {
     background-color: #525252;
     font-family: 'Roboto', sans-serif;
 }
@@ -12,18 +12,18 @@
     box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
 }
 
-.login_form .glyphicon {
+.login-form .glyphicon {
     top: 0;
 }
 
-.login_form {
+.login-form {
     font-size: 14px;
 }
-.login_options {
+.login-options {
     margin: 15px 0;
 }
 
-.login_form .form-group {
+.login-form .form-group {
     margin-top: 10px;
 }
 /*******************NEW GROUP MODAL*********************/
