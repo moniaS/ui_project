@@ -81,9 +81,12 @@ footer {
 .row.content {height: 450px}
 
 /*LEFT SIDEBAR*/
+.list-group-sidebar {
+    height: 530px;
+}
+
 .list-group-sidebar, .sidenav {
     background: white;
-    height: 530px;
     border-radius: 3px;
     -moz-box-shadow: 0 0 10px gray;
     -webkit-box-shadow: 0 0 10px gray;
@@ -145,4 +148,44 @@ footer {
 
 .username-btn:hover {
     background: none !important;
+}
+
+/* GENERIC CLASSES */
+.center {
+    margin: 0 auto;
+}
+
+.block-margin-top-em {
+    margin-top: 1em;
+}
+
+.block-margin-bottom-em {
+    margin-bottom: 1em;
+}
+
+.block-margin-right-hem {
+    margin-right: 0.5em;
+}
+
+/* OVERRIDES */
+.label {
+    font-weight: 400;
+    padding: 0.3em 0.6em 0.2em;
+}
+
+/* CALENDAR */
+.date-with-event {
+    background-image: url("../img/event-arrow.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.calendar-date {
+    cursor: pointer;
+}
+
+.calendar-date-active,
+.calendar-date:hover {
+    background-image: linear-gradient(to bottom,#337ab7 0,#265a88 100%);
+    color: #fff;
 }

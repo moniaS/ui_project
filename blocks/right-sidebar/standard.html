@@ -1,2 +1,106 @@
 <div class="sidenav">
+    <table class="table-condensed table-bordered table-striped text-center center">
+        <thead>
+        <tr>
+            <th colspan="7">
+                <span class="btn-group">
+                    <a class="btn"><i class="fa fa-chevron-left"></i></a>
+                    <a class="btn">Marzec 2017</a>
+                    <a class="btn"><i class="fa fa-chevron-right"></i></a>
+                </span>
+            </th>
+        </tr>
+        <tr>
+            <th>Pn</th>
+            <th>Wt</th>
+            <th>Śr</th>
+            <th>Cz</th>
+            <th>Pt</th>
+            <th>Sob</th>
+            <th>Nd</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="text-muted">29</td>
+            <td class="calendar-date">1</td>
+            <td class="calendar-date">2</td>
+            <td class="calendar-date">3</td>
+            <td class="date-with-event calendar-date">4</td>
+            <td class="calendar-date">5</td>
+            <td class="calendar-date">6</td>
+        </tr>
+        <tr>
+            <td class="calendar-date">7</td>
+            <td class="calendar-date">8</td>
+            <td class="calendar-date">9</td>
+            <td class="date-with-event calendar-date">10</td>
+            <td class="calendar-date">11</td>
+            <td class="calendar-date">12</td>
+            <td class="calendar-date">13</td>
+        </tr>
+        <tr>
+            <td class="date-with-event calendar-date">14</td>
+            <td class="calendar-date">15</td>
+            <td class="calendar-date">16</td>
+            <td class="calendar-date">17</td>
+            <td class="calendar-date">18</td>
+            <td class="calendar-date">19</td>
+            <td class="calendar-date">20</td>
+        </tr>
+        <tr>
+            <td id="js-calendar-date-today" class="calendar-date calendar-date-active">21</td>
+            <td class="calendar-date">22</td>
+            <td id="js-calendar-date-23" class="date-with-event calendar-date">23</td>
+            <td class="calendar-date">24</td>
+            <td id="js-calendar-date-25" class="date-with-event calendar-date">25</td>
+            <td class="calendar-date">26</td>
+            <td class="calendar-date">27</td>
+        </tr>
+        <tr>
+            <td id="js-target-date" class="calendar-date">28</td>
+            <td class="calendar-date">29</td>
+            <td class="calendar-date">30</td>
+            <td class="calendar-date">31</td>
+            <td class="text-muted">1</td>
+            <td class="text-muted">2</td>
+            <td class="text-muted">3</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="text-center block-margin-top-em block-margin-bottom-em">
+        <a data-toggle="modal" data-target="#add-new-event-modal" class="btn btn-primary"><i
+                class="fa fa-plus block-margin-right-hem"></i>Dodaj wydarzenie</a>
+    </div>
+
+    <hr/>
+    <h5 class="text-center block-margin-bottom-em"><strong>Zbliżające się wydarzenia</strong></h5>
+    <hr/>
+    <div id="events-list">
+        <div id="js-calendar-events-date-23" class="list-group">
+            <h5 class="text-center"><strong>Środa, 23 marca</strong></h5>
+            <a href="javascript:void(0)" class="list-group-item">
+                <h5 class="list-group-item-heading"><strong>Elektronika</strong></h5>
+                <p class="list-group-item-text">Zadanie 1</p>
+                <span class="label label-success">POLI</span>
+                <span class="label label-default">OBWODY</span>
+            </a>
+            <a href="javascript:void(0)" class="list-group-item">
+                <h5 class="list-group-item-heading"><strong>Kryptografia</strong></h5>
+                <p class="list-group-item-text">Termin referatu</p>
+                <span class="label label-success">POLI</span>
+                <span class="label label-danger">SHA</span>
+            </a>
+        </div>
+        <div id="js-calendar-events-date-25" class="list-group">
+            <h5 class="text-center"><strong>Piątek, 25 marca</strong></h5>
+            <a href="javascript:void(0)" class="list-group-item">
+                <h5 class="list-group-item-heading"><strong>Interfejsy</strong></h5>
+                <p class="list-group-item-text">Poziom1 1</p>
+                <span class="label label-success">POLI</span>
+                <span class="label label-info">GRAFIKA</span>
+            </a>
+        </div>
+    </div>
 </div>
