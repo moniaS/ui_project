@@ -3,7 +3,15 @@ $(document).ready(function() {
     $('#block-left-sidebar-standard').load('../blocks/left-sidebar/standard.html');
 
     /* Content */
-    $('#block-content-homepage').load('../blocks/main-content/homepage.html');
+    $('#block-content-homepage').load('../blocks/main-content/homepage.html', function() {
+        $('#block-post-math1').load('../blocks/main-content/posts/math1.html', function () {
+            postLoaded();
+        });
+        $('#block-post-math2').load('../blocks/main-content/posts/math2.html', function () {
+            postLoaded();
+        });
+    });
+
 
     /* Load right sidebar */
     $('#block-right-sidebar-standard').load('../blocks/right-sidebar/standard.html', function() {

@@ -1,6 +1,17 @@
 $(document).ready( function() {
-    /* For now I'm empty */
 });
+
+function postLoaded() {
+    $('.like-btn').on("click", function (e) {
+        var element = $(this).closest('.row').find('.like-value');
+        element.html(parseInt(element.html(), 10) + 1);
+    });
+    $('.dislike-btn').on("click", function (e) {
+        var element = $(this).closest('.row').find('.dislike-value');
+        element.html(parseInt(element.html(), 10) - 1);
+    });
+}
+
 
 //***************************** ADDING NEW GROUP *****************************
 function newGroupModalLoaded() {
@@ -106,3 +117,4 @@ function newEventModalLoaded() {
         $('#events-list').append(toAppend);
     })
 }
+
