@@ -2,11 +2,11 @@ $(document).ready( function() {
 });
 
 function postLoaded() {
-    $('.like-btn').on("click", function (e) {
+    $('.like-btn').off("click").on("click", function (e) {
         var element = $(this).closest('.row').find('.like-value');
         element.html(parseInt(element.html(), 10) + 1);
     });
-    $('.dislike-btn').on("click", function (e) {
+    $('.dislike-btn').off("click").on("click", function (e) {
         var element = $(this).closest('.row').find('.dislike-value');
         element.html(parseInt(element.html(), 10) - 1);
     });
