@@ -19,6 +19,18 @@ $(document).ready( function() {
     /* Nothing to do here... */
 });
 
+function postLoaded() {
+    $('.like-btn').off("click").on("click", function (e) {
+        var element = $(this).closest('.row').find('.like-value');
+        element.html(parseInt(element.html(), 10) + 1);
+    });
+    $('.dislike-btn').off("click").on("click", function (e) {
+        var element = $(this).closest('.row').find('.dislike-value');
+        element.html(parseInt(element.html(), 10) - 1);
+    });
+}
+
+
 //***************************** ADDING NEW GROUP *****************************
 function newGroupModalLoaded() {
     $('.btn-file :file').on('change', function() {

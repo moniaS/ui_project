@@ -85,13 +85,14 @@ footer {
     height: 530px;
 }
 
-.list-group-sidebar, .sidenav {
+.list-group-sidebar, .sidenav, .post-group {
     background: white;
     border-radius: 3px;
     -moz-box-shadow: 0 0 10px gray;
     -webkit-box-shadow: 0 0 10px gray;
     box-shadow: 0 0 10px gray;
     text-align: left;
+    margin: 10px;
 }
 
 .list-group-sidebar h3 {
@@ -107,7 +108,7 @@ footer {
 
 .add-group-btn {
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     right: 35%;
     color: #777;
 }
@@ -197,4 +198,48 @@ footer {
 .calendar-date:hover {
     background-image: linear-gradient(to bottom,#337ab7 0,#265a88 100%);
     color: #fff;
+}
+
+/*POSTS*/
+.best-comment {
+    margin: 3px 0 5px 15px;
+}
+
+.post-group {
+    padding: 15px;
+}
+
+.open-chat-btn {
+    color: #777;
+}
+
+.open-chat-btn:hover {
+    cursor: pointer;
+}
+
+.like-btn {
+    margin: 0 2px 0 10px;
+}
+
+.dislike-btn {
+    margin: 0 2px 0 4px;
+}
+
+.post-author-name {
+    font-size: 20px;
+    margin-left: 8px;
+}
+
+.post-date {
+    font-size: 12px;
+    font-style: normal;
+    margin-left: 8px;
+}
+
+.comment-content {
+    font-size: 12px;
+}
+
+.uploaded-image-file {
+    width: 125px;
 }
