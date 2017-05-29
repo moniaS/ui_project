@@ -5,6 +5,10 @@ $(document).ready(function() {
     /* Content */
     $('#block-content-homepage').load('../blocks/main-content/homepage.html');
 
+    $('#block-content-add-new-post').load('../blocks/main-content/add-new-post/general.html', function() {
+        addNewPostLoaded();
+    });
+
     /* Load right sidebar */
     $('#block-right-sidebar-standard').load('../blocks/right-sidebar/standard.html', function() {
         rightSidebarLoaded();

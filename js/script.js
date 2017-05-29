@@ -1,5 +1,22 @@
+/* Variables */
+var definedGroups = [
+    'Sieciowe Systemy Baz Danych',
+    'Kryptografia',
+    'Matematyka I',
+    'Interfejsy',
+    'Grafika',
+    'Numerki'
+];
+
+var availableTags = [
+    'POLI',
+    'GRAFIKA',
+    'OBWODY',
+    'SHA'
+];
+
 $(document).ready( function() {
-    /* For now I'm empty */
+    /* Nothing to do here... */
 });
 
 //***************************** ADDING NEW GROUP *****************************
@@ -71,18 +88,14 @@ function newEventModalLoaded() {
     $('#event-date').datepicker();
 
     $('#event-group').autocomplete({
-        source: [
-            'Sieciowe Systemy Baz Danych',
-            'Kryptografia',
-            'Matematyka I',
-            'Interfejsy',
-            'Grafika',
-            'Numerki'
-        ],
+        source: definedGroups,
         appendTo: '#add-new-event-form'
     });
 
-    $('#event-tags').tagit();
+    $('#event-tags').tagit({
+        availableTags: availableTags,
+        placeholderText: 'Tagi'
+    });
 
     $('#confirm-new-event-btn').on('click', function () {
         var eventName = $('#add-new-event-modal').find('#event-name').val();
@@ -105,4 +118,31 @@ function newEventModalLoaded() {
 
         $('#events-list').append(toAppend);
     })
+}
+
+function addNewPostLoaded() {
+    $('#add-new-post-panel').hide();
+
+    $('#add-new-post-tags').tagit({
+        availableTags: availableTags,
+        placeholderText: 'Tagi'
+    });
+
+    $('#add-new-post-group').autocomplete({
+        source: definedGroups,
+        appendTo: '#add-new-post-form'
+    });
+
+    var myDropzone = new Dropzone('#add-new-post-files', { 
+        url: '/pages/index.html',
+        addRemoveLinks: true,
+        dictRemoveFile: 'Usuń plik'
+    });
+    $('#add-new-post-files').addClass('dropzone');
+
+    $('#add-new-post-btn').on('click', function() {
+        $(this).toggleClass('btn-success');
+        $(this).toggleClass('btn-default');
+        $('#add-new-post-panel').slideToggle();
+    });
 }
