@@ -2,6 +2,7 @@ $(document).ready(function() {
     /* Load left sidebar */
     $('#block-left-sidebar-standard').load('../blocks/left-sidebar/standard.html');
 
+
     /* Content */
     $('#block-content-homepage').load('../blocks/main-content/homepage.html', function() {
         $('#block-post-math1').load('../blocks/main-content/posts/math1.html', function () {
@@ -9,6 +10,10 @@ $(document).ready(function() {
         });
         $('#block-post-math2').load('../blocks/main-content/posts/math2.html', function () {
             postLoaded();
+        });
+        $('#chat-post1').load('../blocks/main-content/chat/chat1.html', function () {
+            postLoaded();
+            chatLoaded1();
         });
     });
 

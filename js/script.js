@@ -28,6 +28,18 @@ function postLoaded() {
         var element = $(this).closest('.row').find('.dislike-value');
         element.html(parseInt(element.html(), 10) - 1);
     });
+    $('.open-chat-btn').off("click").on("click", function (e) {
+        console.log("pokaz czat");
+        $('#chat-post1').show();
+    });
+}
+
+function chatLoaded1() {
+    $('.chat-close').on("click", function (e) {
+        console.log("KLIK1");
+        var element = $(this).closest('#chat-post1');
+        element.hide();
+    });
 }
 
 
@@ -157,4 +169,10 @@ function addNewPostLoaded() {
         $(this).toggleClass('btn-default');
         $('#add-new-post-panel').slideToggle();
     });
+}
+
+/** CHAT **/
+function showChat() {
+
+
 }
