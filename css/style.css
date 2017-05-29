@@ -168,10 +168,19 @@ footer {
     margin-right: 0.5em;
 }
 
+.block-margin-top-20p {
+    margin-top: 20px;
+}
+
 /* OVERRIDES */
 .label {
     font-weight: 400;
     padding: 0.3em 0.6em 0.2em;
+}
+
+.dropzone {
+    border: 2px dashed rgba(0, 0, 0, 0.3);
+    background-color: #f7f7f7;
 }
 
 /* CALENDAR */
