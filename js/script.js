@@ -170,9 +170,3 @@ function addNewPostLoaded() {
         $('#add-new-post-panel').slideToggle();
     });
 }
-
-/** CHAT **/
-function showChat() {
-
-
-}
