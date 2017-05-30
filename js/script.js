@@ -30,18 +30,21 @@ function postLoaded() {
     });
     $('.open-chat-btn').off("click").on("click", function (e) {
         console.log("pokaz czat");
+        var title = $(this).closest(".post-group").find(".post-title").html();
+        $('#chat-post1').find('.chat-title').html(title);
+        console.log(title)
         $('#chat-post1').show();
     });
 }
 
-function chatLoaded1() {
+function chatLoaded() {
     $('.chat-close').on("click", function (e) {
         console.log("KLIK1");
         var element = $(this).closest('#chat-post1');
         element.hide();
     });
 
-    showChat();
+    addMessageOnChatHandler();
 }
 
 
@@ -174,11 +177,11 @@ function addNewPostLoaded() {
 }
 
 /** CHAT **/
-function showChat() {
+function addMessageOnChatHandler() {
     $("#btn-chat1").off('click').on('click', function (e) {
         var chatWindow = $("#chat-post1");
         var content = chatWindow.find(".message-content").val();
-        chatWindow.find("ul").append("<li class='left clearfix'><div class='row'><div class='col-md-12'><i class='fa fa-user-circle fa-lg'></i><label> Joanna Adamska</label> <a class='like-btn'><i class='fa fa-thumbs-up'></i></a><label class='like-value'>0</label><a class='dislike-btn'><i class='fa fa-thumbs-down'></i></a><label class='dislike-value'>0</label><small class='text-muted pull-right'><span class='glyphicon glyphicon-time'></span> Przed chwilą </small> </div> </div> <div class='row'> <div class='col-md-12'> <span class='comment-content'>" + content + "</span></div></div></li></ul></div> ");
+        chatWindow.find("ul").append("<li class='left clearfix'><div class='row'><div class='col-md-12'><i class='fa fa-user-circle fa-lg'> </i><label> Joanna Adamska</label> <a class='like-btn'><i class='fa fa-thumbs-up'></i></a><label class='like-value'>0</label><a class='dislike-btn'> <i class='fa fa-thumbs-down'></i></a><label class='dislike-value'>0</label><small class='text-muted pull-right'><span class='glyphicon glyphicon-time'></span> Przed chwilą </small> </div> </div> <div class='row'> <div class='col-md-12'> <span class='comment-content'>" + content + "</span></div></div></li></ul></div> ");
         chatWindow.find(".message-content").val("");
         scrollToChatBottom(chatWindow)
     })

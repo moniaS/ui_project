@@ -402,7 +402,7 @@ img.hover-shadow {
 /******** CHATS ***********/
 .chat-header-container {
     display: block;
-    background: #337ab7;
+    background-image: linear-gradient(to bottom,#337ab7 0,#265a88 100%);
     color: #FFF;
 }
 .chat-close, .chat-close:hover, .chat-close:visited
