@@ -14,6 +14,7 @@ $(document).ready(function() {
         $('#chat-post1').load('../blocks/main-content/chat/chat1.html', function () {
             postLoaded();
             chatLoaded1();
+            showChat();
         });
     });
 

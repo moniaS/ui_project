@@ -243,7 +243,8 @@ footer {
 /*SHOWING IMAGES*/
 
 .uploaded-image-file {
-    width: 130px;
+    height: 160px;
+    margin-bottom: 5px;
 }
 
 /* The Modal (background) */
@@ -262,8 +263,7 @@ footer {
     width: 25%;
 }
 
-/* The Modal (background) */
-.modal {
+.images-modal {
     display: none;
     position: fixed;
     z-index: 2;
@@ -274,15 +274,9 @@ footer {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
 }
-
-/* Modal Content */
-.modal-content {
-    position: relative;
-    background-color: #fefefe;
+.modal-post-images {
     margin: auto;
-    padding: 0;
-    width: 32%;
-    height: 90%;
+    width: 30%;
 }
 
 /* The Close Button */
@@ -350,7 +344,6 @@ footer {
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
-    top: 0;
 }
 
 img {
@@ -386,16 +379,16 @@ img.hover-shadow {
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
-    bottom: 0;
-    left: 150px;
+    bottom: 100px;
+    left: 600px;
 }
 .file-download-icon {
     color: #f2f2f2;
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
-    top: 0;
-    right: 6px;
+    top: 50px;
+    right: 430px;
 }
 .files-download-icon {
     float: right;
@@ -428,11 +421,12 @@ img.hover-shadow {
 }
 .chat-window
 {
-    z-index: 4;
+    z-index: 2;
     position: fixed;
     bottom: 0;
     right: 0;
     width: 400px;
+    overflow-y: scroll;
 }
 .panel
 {

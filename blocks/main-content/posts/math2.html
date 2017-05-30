@@ -94,19 +94,17 @@
 </div>
 
 
-<div id="post-images-modal" class="modal">
+<div id="post-images-modal" class="images-modal modal">
     <span class="close cursor" onclick="closeImagesModal()">&times;</span>
-    <div class="modal-content">
-
+    <div class="modal-post-images">
         <div class="image-file" value="notatki1.jpg">
             <div class="numbertext">1 / 3</div>
             <img src="http://i.imgur.com/tcKsrh8.jpg" style="width:100%" alt="notatki1.jpg">
             <div class="file-name">notatki1.jpg</div>
             <a class="file-download-icon">
-                <i class="fa fa-download fa-lg"></i>
+                 <i class="fa fa-download fa-lg"></i>
             </a>
         </div>
-
         <div class="image-file" value="notatki2.jpg">
             <div class="numbertext">2 / 3</div>
             <img src="http://i.imgur.com/whc91Cb.jpg" style="width:100%" alt="notatki2.jpg">
@@ -115,7 +113,6 @@
                 <i class="fa fa-download fa-lg"></i>
             </a>
         </div>
-
         <div class="image-file" value="notatki3.jpg">
             <div class="numbertext">3 / 3</div>
             <img src="http://i.imgur.com/tcKsrh8.jpg" style="width:100%" alt="notatki3.jpg">
@@ -124,14 +121,9 @@
                 <i class="fa fa-download fa-lg"></i>
             </a>
         </div>
-
-        <a class="prev" onclick="showNextImage(-1)">&#10094;</a>
-        <a class="next" onclick="showNextImage(1)">&#10095;</a>
-
-        <div class="caption-container">
-            <p id="caption"></p>
-        </div>
     </div>
+    <a class="prev" onclick="showNextImage(-1)">&#10094;</a>
+    <a class="next" onclick="showNextImage(1)">&#10095;</a>
 </div>
 <script>
     function showImagesModal() {
