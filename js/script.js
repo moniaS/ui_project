@@ -15,6 +15,12 @@ var availableTags = [
     'SHA'
 ];
 
+// Event type for ... events
+eventType = {
+    PERSONAL : 0,
+    GROUP : 1
+};
+
 $(document).ready( function() {
     /* Nothing to do here... */
 });
@@ -111,32 +117,58 @@ function rightSidebarLoaded() {
 }
 
 function newEventModalLoaded() {
-    $('#event-date').datepicker();
+    $('.js-datepicker').datepicker();
 
-    $('#event-group').autocomplete({
+    $('#group-event-group').autocomplete({
         source: definedGroups,
         appendTo: '#add-new-event-form'
     });
 
-    $('#event-tags').tagit({
+    $('.js-tags').tagit({
         availableTags: availableTags,
-        placeholderText: 'Tagi'
+        placeholderText: ' Tagi'
+    });
+
+    var chosenEventType = eventType.GROUP;
+
+    $('.js-add-event-type').on('click', function() {
+        if ($(this).attr('href') == '#group') {
+            chosenEventType = eventType.GROUP;
+
+        } else {
+            chosenEventType = eventType.PERSONAL;
+        }
+
+        console.log(chosenEventType);
     });
 
     $('#confirm-new-event-btn').on('click', function () {
-        var eventName = $('#add-new-event-modal').find('#event-name').val();
-        var groupName = $('#add-new-event-modal').find('#event-group').val();
-        var tags = $('#event-tags').tagit('assignedTags');
+        let eventName = null;
+        let groupName = null;
+        let tags = null;
+
+        if (chosenEventType == eventType.GROUP) {
+            eventName = $('#add-new-event-modal').find('#group-event-name').val();
+            groupName = $('#add-new-event-modal').find('#group-event-group').val();
+            tags = $('#group-event-tags').tagit('assignedTags');
+
+        } else {
+            eventName = $('#add-new-event-modal').find('#personal-event-name').val();
+            tags = $('#personal-event-tags').tagit('assignedTags');
+        }
 
         $('#js-target-date').addClass('date-with-event');
-        var toAppend =
+        let toAppend =
             '<div class="list-group">'
             + '<h5 class="text-center"><strong>Poniedziałek, 28 marca</strong></h5>'
             + '<a href="javascript:void(0)" class="list-group-item">'
-            + '<h5 class="list-group-item-heading"><strong>' + eventName + '</strong></h5>'
-            + '<p class="list-group-item-text">' + groupName + '</p>';
+            + '<h5 class="list-group-item-heading"><strong>' + eventName + '</strong></h5>';
 
-        for (var i = 0, len = tags.length; i < len; i++) {
+        if (chosenEventType == eventType.GROUP) {
+            toAppend += '<p class="list-group-item-text">' + groupName + '</p>';
+        }
+
+        for (let i = 0, len = tags.length; i < len; i++) {
             toAppend += '<span class="label label-success">' + tags[i] + '</span>';
         }
 
@@ -164,6 +196,7 @@ function addNewPostLoaded() {
         addRemoveLinks: true,
         dictRemoveFile: 'Usuń plik'
     });
+
     $('#add-new-post-files').addClass('dropzone');
 
     $('#add-new-post-btn').on('click', function() {

@@ -6,10 +6,32 @@
                 <h4 class="modal-title">Dodaj nowe wydarzenie</h4>
             </div>
             <div id="add-new-event-form" class="modal-body">
-                <input id="event-name" class="form-control block-margin-bottom-em" type="text" placeholder="Nazwa wydarzenia *"/>
-                <input id="event-group" class="form-control block-margin-bottom-em" type="text" placeholder="Wydarzenie dla grupy *"/>
-                <input id="event-date" class="form-control block-margin-bottom-em" type="text" placeholder="Data wydarzenia *"/>
-                <input id="event-tags" class="form-control block-margin-bottom-em" type="text" placeholder="Tagi"/>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#group" aria-controls="group" role="tab" data-toggle="tab" class="js-add-event-type">
+                            <i class="fa fa-users block-margin-right-hem"></i>Dla grupy
+                        </a>
+                    </li>
+                    <li role="presentation" >
+                        <a href="#personal" aria-controls="personal" role="tab" data-toggle="tab" class="js-add-event-type">
+                            <i class="fa fa-user block-margin-right-hem"></i>Osobiste
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="group">
+                        <input id="group-event-name" class="form-control block-margin-top-em block-margin-bottom-em" type="text" placeholder="Nazwa wydarzenia *"/>
+                        <input id="group-event-group" class="form-control block-margin-bottom-em" type="text" placeholder="Wydarzenie dla grupy *"/>
+                        <input id="group-event-date" class="form-control block-margin-bottom-em js-datepicker" type="text" placeholder="Data wydarzenia *"/>
+                        <input id="group-event-tags" class="form-control block-margin-bottom-em js-tags" type="text"/>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="personal">
+                        <input id="personal-event-name" class="form-control block-margin-top-em block-margin-bottom-em" type="text" placeholder="Nazwa wydarzenia *"/>
+                        <input id="personal-event-date" class="form-control block-margin-bottom-em js-datepicker" type="text" placeholder="Data wydarzenia *"/>
+                        <input id="personal-event-tags" class="form-control block-margin-bottom-em js-tags" type="text"/>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <input type="button" class="btn btn-primary" value="Dodaj" id="confirm-new-event-btn"
