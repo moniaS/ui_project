@@ -1,37 +1,36 @@
-<nav class="navbar navbar-inverse">
+<div class="navbar navbar-inverse">
     <div class="container-fluid">
-        <div class="navbar-header">
-            <div class="row">
-                <div class="col-sm-10 col-md-offset-1">
-                    <div class="row">
-                        <div class="col-sm-9">
-                            <div class="input-group stylish-input-group">
-                                <input type="text" class="form-control" placeholder="Search">
-                                <span class="input-group-addon">
-                                    <button type="submit">
-                                        <span class="glyphicon glyphicon-search"></span>
-                                    </button>
-                                </span>
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+                <div class="col-xs-9">
+                    <form class="navbar-form">
+                        <div class="form-group" style="display:inline;">
+                            <div class="input-group" style="display:table;">
+                                <span class="input-group-addon" style="width:1%;"><span
+                                        class="glyphicon glyphicon-search"></span></span>
+                                <input id="search-input" class="form-control" name="search" placeholder="Szukasz grupy, posta a może pliku?" autocomplete="off"
+                                       autofocus="autofocus" type="text">
                             </div>
                         </div>
-                        <div class="col-sm-2 pull-right">
-                            <ul class="nav navbar-nav navbar-right">
-                                <div class="dropdown">
-                                    <a class="btn btn-primary dropdown-toggle username-btn" type="button"
-                                       data-toggle="dropdown">username
-                                        <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Ustawienia</a></li>
-                                        <li><a href="#">Moje konto</a></li>
-                                        <li class="divider"/>
-                                        <li><a href="login.html">Wyloguj</a></li>
-                                    </ul>
-                                </div>
+                    </form>
+                </div>
+                <div class="col-xs-3">
+                    <ul class="nav navbar-nav pull-right block-margin-right-2em">
+                        <li><a href="#"><i class="fa fa-bell"></i></a></li>
+                        <li class="dropdown">
+                            <a class="btn btn-primary dropdown-toggle username-btn" type="button"
+                               data-toggle="dropdown"><i class="fa fa-user block-margin-right-hem"></i>username
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Ustawienia</a></li>
+                                <li><a href="#">Moje konto</a></li>
+                                <li class="divider"/>
+                                <li><a href="login.html">Wyloguj</a></li>
                             </ul>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-</nav>
+</div>
