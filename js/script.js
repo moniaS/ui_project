@@ -281,6 +281,25 @@ function rightSidebarSearchOptionsLoaded() {
             $('#seek-where-groups-specific-options').show();
         }
     });
+
+    /* Actual filtering (spare me, please!) */
+    let checkExistCat = setInterval(function () {
+        if ($('.search-options-category').length) {
+            clearInterval(checkExist);
+
+            $('[name="seek-what"]').on('change', function() {
+                $('.js-search-item').fadeIn(200);
+            });
+
+            $('#search-option-groups').on('change', function() {
+                if (this.checked) {
+                    $('.js-post').fadeOut(200);
+                } else {
+                    $('.js-post').fadeIn(200);
+                }
+            });
+        }
+    }, 100);
 }
 
 /* Navbar */
@@ -291,6 +310,11 @@ function navbarLoaded() {
 
     $('.navbar-form').on('submit', function(e) {
         e.preventDefault();
+
+        // Reset visibility settings
+        $('[id^=block-search-post-]').show();
+        $('#search-groups-list').show();
+        $('.js-search-group-to-hide').show();
 
         let input = $('#search-input').val().trim();
         $('#search-input').val(input);
@@ -307,7 +331,30 @@ function navbarLoaded() {
                     $('#search-text-repeated').html(input);
                 }
             }, 100);
+
+            if (input == 'notatki') {
+                $('#block-search-post-math1').hide();
+                $('#block-search-post-crypto2').hide();
+                $('#search-groups-list').hide();
+
+                if ($('.js-search-dates').val().length) {
+                    $('#block-search-post-math2').hide();
+                }
+            }
+
+            else if (input == 'Algorytmy' || input == 'algorytmy') {
+                $('[id^=block-search-post-]').hide();
+                $('.js-search-group-to-hide').hide();
+            }
+
+            else if (input == 'nic') {
+                $('#block-content-search').html('Brak wyników');
+            }
         }
+
+        $('.js-search-dates').on('change', function () {
+            $('#block-search-post-math2').hide();
+        });
     });
 }
 
