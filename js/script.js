@@ -28,6 +28,7 @@ eventType = {
 };
 
 var dateFormat = "dd.mm.yy";
+var chosenGroup = null;
 
 $(document).ready( function() {
     /* Nothing to do here... */
@@ -199,7 +200,7 @@ function addNewPostLoaded() {
         placeholderText: ' Tagi'
     });
 
-    $('#add-new-post-group').autocomplete({
+    $('#add-new-post-groups').autocomplete({
         source: definedGroups,
         appendTo: '#add-new-post-form'
     });
@@ -216,6 +217,37 @@ function addNewPostLoaded() {
         $(this).toggleClass('btn-success');
         $(this).toggleClass('btn-default');
         $('#add-new-post-panel').slideToggle();
+    });
+
+    $('#add-new-post-submit').on('click', function() {
+        $.ajax({
+            url: '/blocks/main-content/posts/wireframe-post.html',
+            type: 'get',
+            async: true,
+            success: function(html) {
+                var template = html;
+                template = template.replace('{group_name}', $('#add-new-post-groups').val());
+                template = template.replace('{content}', $('#add-new-post-content').val());
+
+                let labels = "";
+                let acquiredTags = $('#add-new-post-tags').tagit('assignedTags');
+
+                for (let i = 0; i < acquiredTags.length; i++) {
+                    if ((i+1) % 2 == 0) {
+                        labels += '<span class="label label-success">' + acquiredTags[i] + '</span>';
+                    } else if ((i+1) % 3 == 0) {
+                        labels += '<span class="label label-default">' + acquiredTags[i] + '</span>';
+                    } else {
+                        labels += '<span class="label label-danger">' + acquiredTags[i] + '</span>';
+                    }
+
+                }
+
+                template = template.replace('{labels}', labels);
+                $('#add-new-post-btn').click();
+                $('.block-post-empty').hide().html(template).slideDown();
+            }
+        });
     });
 }
 
@@ -429,4 +461,11 @@ function notificationSettingsLoaded() {
             $(document).find('.email-notification-checkbox').removeAttr('checked');
         }
     });
+}
+
+function prepareAddNewPostOnGroup(groupName) {
+    $('#add-new-post-groups').hide().val(groupName);
+    $('.block-post-empty').html('');
+    $('#add-new-post-content').val('');
+    $('#add-new-post-tags').tagit("removeAll");
 }

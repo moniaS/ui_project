@@ -10,6 +10,8 @@ $(document).ready(function() {
                     postLoaded();
                 });
             })
+
+            prepareAddNewPostOnGroup('Matematyka I');
         });
 
         $("#group-crypto").on('click', function () {
@@ -21,6 +23,8 @@ $(document).ready(function() {
                     postLoaded();
                 });
             })
+
+            prepareAddNewPostOnGroup('Kryptografia I');
         })
     });
 
