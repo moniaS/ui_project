@@ -387,6 +387,7 @@ function notificationsLoaded() {
     $("#show-all-notifications-btn").on('click', function () {
         $('#block-content-homepage').load('../blocks/main-content/notifications/allNotifications.html', addSettingsButtonHandler);
         $("#notifications-container").hide();
+        $('#add-new-post-btn').hide();
     });
 
     $(document).on('click', function()
@@ -405,6 +406,7 @@ function notificationsLoaded() {
 function addSettingsButtonHandler() {
     $(".notification-settings-icon").on('click', function () {
         $("#notifications-container").hide();
+        $('#add-new-post-btn').hide();
         $('#block-content-homepage').load('../blocks/main-content/notifications/settings.html', function () {
             notificationSettingsLoaded();
         });
