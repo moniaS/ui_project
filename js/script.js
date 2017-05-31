@@ -327,3 +327,37 @@ function downloadsLoaded() {
         }
     })
 }
+/** NOTIFICATIONS **/
+function notificationsLoaded() {
+    $("#notifications-link").on('click', function()
+    {
+        $("#notifications-container").fadeToggle(300);
+        addSettingsButtonHandler();
+        $("#notification-count").fadeOut("slow");
+        return false;
+    });
+
+    $("#show-all-notifications-btn").on('click', function () {
+        $('#block-content-homepage').load('../blocks/main-content/notifications/allNotifications.html', addSettingsButtonHandler);
+        $("#notifications-container").hide();
+    });
+
+    $(document).on('click', function()
+    {
+        $("#notifications-container").hide();
+    });
+
+    $("#notifications-container").on('click', function()
+    {
+        return false
+    });
+
+    addSettingsButtonHandler();
+}
+
+function addSettingsButtonHandler() {
+    $(".notification-settings-icon").on('click', function () {
+        $("#notifications-container").hide();
+        $('#block-content-homepage').load('../blocks/main-content/notifications/settings.html');
+    })
+}

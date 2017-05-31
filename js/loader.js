@@ -2,7 +2,6 @@ $(document).ready(function() {
     /* Load left sidebar */
     $('#block-left-sidebar-standard').load('../blocks/left-sidebar/standard.html', function () {
         $("#group-math-I").on('click', function () {
-            console.log('clicked')
             $('#block-content-homepage').load('../blocks/main-content/group-view/math1.html', function() {
                 $('#block-post-math1').load('../blocks/main-content/posts/math1.html', function () {
                     postLoaded();
@@ -94,5 +93,6 @@ $(document).ready(function() {
     /* Navbars */
     $('#block-navbar-standard').load('../blocks/navbar/standard.html', function() {
         navbarLoaded();
+        notificationsLoaded();
     });
 });
