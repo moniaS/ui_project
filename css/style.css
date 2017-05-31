@@ -95,11 +95,22 @@ footer {
     margin: 10px;
 }
 
-.list-group-sidebar h3 {
-    background: #525252;
+.list-group-sidebar .group-header {
     color: white;
     padding: 10px;
     border-radius: inherit;
+    font-size: 24px;
+    margin: auto 0;
+}
+
+.list-group-sidebar .list-group-sidebar-header a {
+    color: white;
+}
+
+.list-group-sidebar-header {
+    background: #525252;
+    height: 60px;
+    margin: auto 0;
 }
 
 .list-group-sidebar ul a {
@@ -117,6 +128,12 @@ footer {
 }
 .sidenav {
     margin-top: 20px;
+}
+.add-group-icon {
+    margin-top: 20px;
+    float: right;
+    cursor: pointer;
+    margin-right: 15px;
 }
 
 /*NAVBAR*/
