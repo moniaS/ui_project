@@ -12,7 +12,13 @@ var availableTags = [
     'POLI',
     'GRAFIKA',
     'OBWODY',
-    'SHA'
+    'SHA',
+    'KRYPTO',
+    'MATERIAŁY',
+    'KOLOKWIUM I',
+    'MATMA',
+    'HASH',
+    'NOTATKI'
 ];
 
 // Event type for ... events
