@@ -12,7 +12,13 @@ var availableTags = [
     'POLI',
     'GRAFIKA',
     'OBWODY',
-    'SHA'
+    'SHA',
+    'KRYPTO',
+    'MATERIAŁY',
+    'KOLOKWIUM I',
+    'MATMA',
+    'HASH',
+    'NOTATKI'
 ];
 
 // Event type for ... events
@@ -308,4 +314,16 @@ function navbarLoaded() {
 /* Search results */
 function searchResultsLoaded() {
     $('#block-content-search').hide();
+}
+
+/* DOWNLOADS */
+function downloadsLoaded() {
+    $('.download-image-file').off('click').on('click', function (e) {
+        var element = $(this).closest('.download-checkbox-wrapper').find('input');
+        if (element.is(':checked')){
+            element.attr('checked', false);
+        } else {
+            element.attr('checked', true);
+        }
+    })
 }
