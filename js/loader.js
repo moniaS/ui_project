@@ -71,7 +71,7 @@ $(document).ready(function() {
     });
 
     $('#block-modal-download-files').load('../blocks/modal/download-files.html', function() {
-
+        downloadsLoaded();
     });
 
     /* Navbars */
