@@ -21,6 +21,8 @@ eventType = {
     GROUP : 1
 };
 
+var dateFormat = "dd.mm.yy";
+
 $(document).ready( function() {
     /* Nothing to do here... */
 });
@@ -102,7 +104,7 @@ function appendRowToGroupsList(inputFile, groupName) {
 }
 
 // ********************* CALENDAR *********************
-function rightSidebarLoaded() {
+function rightSidebarCalendarLoaded() {
     $('#js-calendar-date-23').on('click', function() {
         $('#js-calendar-events-date-23').show();
         $('#js-calendar-events-date-25').hide();
@@ -120,7 +122,9 @@ function rightSidebarLoaded() {
 }
 
 function newEventModalLoaded() {
-    $('.js-datepicker').datepicker();
+    $('.js-datepicker').datepicker({
+        dateFormat: dateFormat
+    });
 
     $('#group-event-group').autocomplete({
         source: definedGroups,
@@ -194,7 +198,7 @@ function addNewPostLoaded() {
         appendTo: '#add-new-post-form'
     });
 
-    var myDropzone = new Dropzone('#add-new-post-files', { 
+    let myDropzone = new Dropzone('#add-new-post-files', {
         url: '/pages/index.html',
         addRemoveLinks: true,
         dictRemoveFile: 'Usuń plik'
@@ -224,4 +228,58 @@ function scrollToChatBottom(chatWindowElem) {
     var elemToScroll = chatWindowElem.find('.panel-body');
     var height = elemToScroll[0].scrollHeight;
     elemToScroll.animate({ scrollTop:height }, 1000);
+}
+
+/* Search and filters in right sidebar */
+function rightSidebarSearchOptionsLoaded() {
+    $('#block-right-sidebar-search-options').hide();
+
+    $('.search-filters-checkboxes').hide();
+
+    $('.js-search-dates').datepicker({
+        dateFormat: dateFormat
+    });
+
+    let checkExist = setInterval(function() {
+        if ($('#search-input').length) {
+            clearInterval(checkExist);
+
+            $('#search-input').on('click', function() {
+                $('#block-right-sidebar-calendar-standard').fadeOut(200, function() {
+                    $('#block-right-sidebar-search-options').fadeIn(200);
+                });
+            });
+        }
+    }, 100);
+
+    $('#js-show-calendar').on('click', function() {
+        $('#block-right-sidebar-search-options').fadeOut(200, function() {
+            $('#block-right-sidebar-calendar-standard').fadeIn(200);
+        });
+    });
+
+    $('[name="seek-what"]').on('click', function() {
+        if ($(this).attr('value') == 'seek-what-all') {
+            $('#seek-what-specific-options').hide().find('input[type="checkbox"]').prop('checked', false);
+
+        } else {
+            $('#seek-what-specific-options').show();
+        }
+    });
+
+    $('[name="seek-where-groups"]').on('click', function() {
+        if ($(this).attr('value') == 'seek-where-groups-all') {
+            $('#seek-where-groups-specific-options').hide().find('input[type="checkbox"]').prop('checked', false);
+
+        } else {
+            $('#seek-where-groups-specific-options').show();
+        }
+    });
+}
+
+/* Navbar */
+function navbarLoaded() {
+    $('#search-btn').on('click', function() {
+        alert('xd');
+    });
 }
