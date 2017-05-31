@@ -487,8 +487,7 @@ img.hover-shadow {
     border-bottom: 1px dotted #B3A9A9;
 }
 
-.panel-body
-{
+.chat-body {
     overflow-y: scroll;
     height: 250px;
 }

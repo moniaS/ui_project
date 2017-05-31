@@ -196,7 +196,7 @@ function addNewPostLoaded() {
 
     $('#add-new-post-tags').tagit({
         availableTags: availableTags,
-        placeholderText: 'Tagi'
+        placeholderText: ' Tagi'
     });
 
     $('#add-new-post-group').autocomplete({
