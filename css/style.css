@@ -488,6 +488,11 @@ img.hover-shadow {
     background-color: #CCCCCC;
 }
 
+.chat-attachment
+{
+    margin-top: 10px;
+}
+
 /* Search */
 .search-filters-checkboxes {
     margin-left: 2em;
