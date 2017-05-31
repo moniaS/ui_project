@@ -160,6 +160,10 @@ footer {
     margin-top: 1em;
 }
 
+.block-margin-top-2em {
+    margin-top: 2em;
+}
+
 .block-margin-bottom-em {
     margin-bottom: 1em;
 }
@@ -168,8 +172,28 @@ footer {
     margin-right: 0.5em;
 }
 
+.block-margin-right-2em {
+    margin-right: 2.0em;
+}
+
 .block-margin-top-20p {
     margin-top: 20px;
+}
+
+.block-horizontally-padded-5pc {
+    padding-right: 5%;
+     padding-left: 5%;
+}
+
+.act-as-clickable {
+    cursor: pointer;
+}
+
+.act-as-clickable:hover,
+.act-as-clickable:active {
+    background-image: linear-gradient(to bottom,#337ab7 0,#265a88 100%);
+    color: #fff;
+    border: 0;
 }
 
 /* OVERRIDES */
@@ -462,4 +486,13 @@ img.hover-shadow {
 {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: #CCCCCC;
+}
+
+/* Search */
+.search-filters-checkboxes {
+    margin-left: 2em;
+}
+
+.search-options-category {
+    margin-left: 1em;
 }

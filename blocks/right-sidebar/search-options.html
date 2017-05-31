@@ -1,51 +1,10 @@
-<div class="sidenav col-xs-12">
-    <h4>Gdzie szukasz?</h4>
-    <div class="radio">
-        <label>
-            <input type="radio" name="seek-where" value="seek-where-all" checked>
-            Wszędzie
-        </label>
-    </div>
-    <div class="radio">
-        <label>
-            <input type="radio" name="seek-where" value="seek-where-chosen">
-            Wybrane
-        </label>
-    </div>
-    <div id="seek-where-specific-options" class="search-filters-checkboxes">
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" value="">
-                Tagi
-            </label>
-        </div>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" value="">
-                Treści
-            </label>
-        </div>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" value="">
-                Tytuły
-            </label>
-        </div>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" value="">
-                Autorzy
-            </label>
-        </div>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" value="">
-                Grupy
-            </label>
-        </div>
-    </div>
+<div class="text-center block-margin-top-em block-margin-bottom-em">
+    <a id="js-show-calendar" class="btn btn-primary"><i
+            class="fa fa-calendar block-margin-right-hem"></i>Powróć do kalendarza</a>
+</div>
 
-    <h4>Czego szukasz?</h4>
+<h4><i class="fa fa-edit block-margin-right-hem"></i>Czego szukasz?</h4>
+<div class="search-options-category">
     <div class="radio">
         <label>
             <input type="radio" name="seek-what" value="seek-what-all" checked>
@@ -55,20 +14,38 @@
     <div class="radio">
         <label>
             <input type="radio" name="seek-what" value="seek-what-chosen">
-            Wybrane
+            Sprecyzuj kryteria
         </label>
     </div>
     <div id="seek-what-specific-options" class="search-filters-checkboxes">
         <div class="checkbox">
             <label>
                 <input type="checkbox" value="">
-                Wpisy
+                Posty
+            </label>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="">
+                Grupy
             </label>
         </div>
         <div class="checkbox">
             <label>
                 <input type="checkbox" value="">
                 Pliki
+            </label>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="">
+                Tagi
+            </label>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="">
+                Autorzy
             </label>
         </div>
         <div class="checkbox">
@@ -83,25 +60,21 @@
                 Najlepsze wypowiedzi
             </label>
         </div>
-    </div>
+</div>
+</div>
 
-    <h4>Kiedy dodano?</h4>
-    <div class="row">
-        <input type="text" class="col-xs-6" placeholder="Od dnia...">
-        <input type="text" class="col-xs-6" placeholder="Do dnia...">
-    </div>
-
-    <h4>W jakich grupach szukasz?</h4>
+<h4 class="block-margin-top-2em"><i class="fa fa-users block-margin-right-hem"></i>W jakich grupach szukasz?</h4>
+<div class="search-options-category">
     <div class="radio">
         <label>
-            <input type="radio" name="seek-what-groups" value="seek-where-groups-all" checked>
-            Wszystkie
+            <input type="radio" name="seek-where-groups" value="seek-where-groups-all" checked>
+            W każdej
         </label>
     </div>
     <div class="radio">
         <label>
-            <input type="radio" name="seek-what-groups" value="seek-where-groups-chosen">
-            Wybrane
+            <input type="radio" name="seek-where-groups" value="seek-where-groups-chosen">
+            Wybierz konkretne grupy
         </label>
     </div>
     <div id="seek-where-groups-specific-options" class="search-filters-checkboxes">
@@ -120,7 +93,7 @@
         <div class="checkbox">
             <label>
                 <input type="checkbox" value="">
-                Matematyka dyskretna
+                Numerki
             </label>
         </div>
         <div class="checkbox">
@@ -132,32 +105,20 @@
         <div class="checkbox">
             <label>
                 <input type="checkbox" value="">
-                Projektowanie interfejsów
+                Interfejsy
             </label>
         </div>
         <div class="checkbox">
             <label>
                 <input type="checkbox" value="">
-                Architektura komputerów
-            </label>
-        </div>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" value="">
-                Elektronika
-            </label>
-        </div>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" value="">
-                Bazy danych
-            </label>
-        </div>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" value="">
-                Seminarium dyplomowe I
+                Grafika
             </label>
         </div>
     </div>
+</div>
+
+<h4 class="block-margin-top-2em"><i class="fa fa-calendar block-margin-right-hem"></i>Kiedy dodano?</h4>
+<div class="row block-horizontally-padded-5pc block-margin-bottom-em">
+    <input type="text" class="col-xs-6 js-search-dates" placeholder="Od dnia...">
+    <input type="text" class="col-xs-6 js-search-dates" placeholder="Do dnia...">
 </div>

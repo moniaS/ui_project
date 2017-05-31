@@ -53,8 +53,12 @@ $(document).ready(function() {
     });
 
     /* Load right sidebar */
-    $('#block-right-sidebar-standard').load('../blocks/right-sidebar/standard.html', function() {
-        rightSidebarLoaded();
+    $('#block-right-sidebar-calendar-standard').load('../blocks/right-sidebar/calendar-standard.html', function() {
+        rightSidebarCalendarLoaded();
+    });
+
+    $('#block-right-sidebar-search-options').load('../blocks/right-sidebar/search-options.html', function() {
+        rightSidebarSearchOptionsLoaded();
     });
 
     /* Modals */
@@ -67,5 +71,7 @@ $(document).ready(function() {
     });
 
     /* Navbars */
-    $('#block-navbar-standard').load('../blocks/navbar/standard.html');
+    $('#block-navbar-standard').load('../blocks/navbar/standard.html', function() {
+        navbarLoaded();
+    });
 });
