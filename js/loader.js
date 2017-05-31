@@ -66,6 +66,10 @@ $(document).ready(function() {
         newEventModalLoaded();
     });
 
+    $('#block-modal-download-files').load('../blocks/modal/download-files.html', function() {
+
+    });
+
     /* Navbars */
     $('#block-navbar-standard').load('../blocks/navbar/standard.html');
 });
