@@ -280,6 +280,32 @@ function rightSidebarSearchOptionsLoaded() {
 /* Navbar */
 function navbarLoaded() {
     $('#search-btn').on('click', function() {
-        alert('xd');
+        $('.navbar-form').submit();
     });
+
+    $('.navbar-form').on('submit', function(e) {
+        e.preventDefault();
+
+        let input = $('#search-input').val().trim();
+        $('#search-input').val(input);
+
+        if (input != '') {
+            $('.js-content-not-search').fadeOut(200, function () {
+                $('#block-content-search').fadeIn(200);
+            });
+
+            let checkExist = setInterval(function () {
+                if ($('#search-text-repeated').length) {
+                    clearInterval(checkExist);
+
+                    $('#search-text-repeated').html(input);
+                }
+            }, 100);
+        }
+    });
+}
+
+/* Search results */
+function searchResultsLoaded() {
+    $('#block-content-search').hide();
 }

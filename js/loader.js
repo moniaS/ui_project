@@ -47,6 +47,23 @@ $(document).ready(function() {
         });
     });
 
+    $('#block-content-search').load('../blocks/main-content/search-results.html', function() {
+        $('#block-search-post-crypto1').load('../blocks/main-content/posts/crypto1.html', function () {
+            postLoaded();
+        });
+        $('#block-search-post-crypto2').load('../blocks/main-content/posts/crypto2.html', function () {
+            postLoaded();
+        });
+        $('#block-search-post-math1').load('../blocks/main-content/posts/math1.html', function () {
+            postLoaded();
+        });
+        $('#block-search-post-math2').load('../blocks/main-content/posts/math2.html', function () {
+            postLoaded();
+        });
+        $('#block-search-groups').load('../blocks/main-content/groups-list.html');
+        searchResultsLoaded();
+    });
+
 
     $('#block-content-add-new-post').load('../blocks/main-content/add-new-post/general.html', function() {
         addNewPostLoaded();
