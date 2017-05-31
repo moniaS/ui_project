@@ -393,6 +393,19 @@ function navbarLoaded() {
 /* Search results */
 function searchResultsLoaded() {
     $('#block-content-search').hide();
+
+    let checkExist = setInterval(function() {
+        if ($('.group-list-btn').length) {
+            clearInterval(checkExist);
+
+            $('.group-list-btn').on('click', function(e) {
+                e.preventDefault();
+                let name = $(this).parent().next().find('h4').text();
+                $(".sidebar-nav").append('<li><a href="#"><i class="fa fa-users"></i><span> ' + name + '</span></a></li>');
+                $(this).parent().parent().fadeOut(200);
+            });
+        }
+    }, 100);
 }
 
 /* DOWNLOADS */
