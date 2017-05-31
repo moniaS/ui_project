@@ -358,6 +358,26 @@ function notificationsLoaded() {
 function addSettingsButtonHandler() {
     $(".notification-settings-icon").on('click', function () {
         $("#notifications-container").hide();
-        $('#block-content-homepage').load('../blocks/main-content/notifications/settings.html');
+        $('#block-content-homepage').load('../blocks/main-content/notifications/settings.html', function () {
+            notificationSettingsLoaded();
+        });
     })
+}
+
+function notificationSettingsLoaded() {
+    $('#turn-on-page-notification').on('change', function(){
+        if($(this).is(':checked')){
+            $(document).find('.page-notification-checkbox').attr('checked', true);
+        } else {
+            $(document).find('.page-notification-checkbox').removeAttr('checked');
+        }
+    });
+
+    $('#turn-on-email-notification').on('change', function(){
+        if($(this).is(':checked')){
+            $(document).find('.email-notification-checkbox').attr('checked', true);
+        } else {
+            $(document).find('.email-notification-checkbox').removeAttr('checked');
+        }
+    });
 }
