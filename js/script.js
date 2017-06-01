@@ -112,14 +112,30 @@ function appendRowToGroupsList(inputFile, groupName) {
 
 // ********************* CALENDAR *********************
 function rightSidebarCalendarLoaded() {
+    let chosenDate = 21;
+
     $('#js-calendar-date-23').on('click', function() {
-        $('#js-calendar-events-date-23').show();
-        $('#js-calendar-events-date-25').hide();
+        if (chosenDate != 23) {
+            $('#js-calendar-events-date-23').show();
+            $('#js-calendar-events-date-25').hide();
+            chosenDate = 23;
+        } else {
+            $('#js-calendar-events-date-23').show();
+            $('#js-calendar-events-date-25').show();
+            chosenDate = 21;
+        }
     });
 
     $('#js-calendar-date-25').on('click', function() {
-        $('#js-calendar-events-date-25').show();
-        $('#js-calendar-events-date-23').hide();
+        if (chosenDate != 25) {
+            $('#js-calendar-events-date-25').show();
+            $('#js-calendar-events-date-23').hide();
+            chosenDate = 25;
+        } else {
+            $('#js-calendar-events-date-23').show();
+            $('#js-calendar-events-date-25').show();
+            chosenDate = 21;
+        }
     });
 
     $('.calendar-date').on('click', function() {
