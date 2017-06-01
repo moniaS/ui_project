@@ -3,6 +3,7 @@ $(document).ready(function() {
     $('#block-left-sidebar-standard').load('../blocks/left-sidebar/standard.html', function () {
         $("#group-math-I").on('click', function () {
             $('#block-content-homepage').load('../blocks/main-content/group-view/math1.html', function() {
+                $('#block-content-add-new-post').show();
                 $('#block-post-math1').load('../blocks/main-content/posts/math1.html', function () {
                     postLoaded();
                 });
@@ -16,6 +17,7 @@ $(document).ready(function() {
 
         $("#group-crypto").on('click', function () {
             $('#block-content-homepage').load('../blocks/main-content/group-view/cryptography.html', function() {
+                $('#block-content-add-new-post').show();
                 $('#block-post-crypto1').load('../blocks/main-content/posts/crypto1.html', function () {
                     postLoaded();
                 });
@@ -31,6 +33,8 @@ $(document).ready(function() {
 
     /* Content */
     $('#block-content-homepage').load('../blocks/main-content/homepage.html', function() {
+        $('#block-content-add-new-post').show();
+
         $('#block-post-crypto1').load('../blocks/main-content/posts/crypto1.html', function () {
             postLoaded();
         });

@@ -463,6 +463,7 @@ function notificationsLoaded() {
 
     $("#show-all-notifications-btn").on('click', function () {
         $('#block-content-homepage').load('../blocks/main-content/notifications/allNotifications.html', addSettingsButtonHandler);
+        $('#block-content-add-new-post').hide();
         $("#notifications-container").hide();
         $('#add-new-post-btn').hide();
     });
@@ -485,6 +486,7 @@ function addSettingsButtonHandler() {
         $("#notifications-container").hide();
         $('#add-new-post-btn').hide();
         $('#block-content-homepage').load('../blocks/main-content/notifications/settings.html', function () {
+            $('#block-content-add-new-post').hide();
             notificationSettingsLoaded();
         });
     })
