@@ -336,7 +336,10 @@ function rightSidebarSearchOptionsLoaded() {
             clearInterval(checkExist);
 
             $('[name="seek-what"]').on('change', function() {
-                $('.js-search-item').fadeIn(200);
+                if (this.checked && this.value == 'seek-what-all') {
+                    console.log($(this).val());
+                    $('.js-search-item').fadeIn(200);
+                }
             });
 
             $('#search-option-groups').on('change', function() {
@@ -390,8 +393,9 @@ function navbarLoaded() {
                 }
             }
 
-            else if (input == 'Algorytmy' || input == 'algorytmy') {
+            else if (input == 'Algorytm' || input == 'algorytm') {
                 $('[id^=block-search-post-]').hide();
+                $('.js-post-algorytm').show();
                 $('.js-search-group-to-hide').hide();
             }
 
