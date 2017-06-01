@@ -351,6 +351,18 @@ function rightSidebarSearchOptionsLoaded() {
             });
         }
     }, 100);
+
+    let checkExistMath = setInterval(function () {
+        if ($('#block-search-post-crypto1').length) {
+            clearInterval(checkExist);
+
+            $('#search-group-math1').on('change', function() {
+                if (this.checked) {
+                    $('.js-post-crypto').hide();
+                }
+            });
+        }
+    }, 100);
 }
 
 /* Navbar */
