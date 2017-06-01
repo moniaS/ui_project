@@ -456,6 +456,10 @@ img.hover-shadow {
 {
     color: #FFF;
 }
+.chat-header-container:hover, .chat-header-container:visited, .chat-header-container:active, .chat-header-container:link
+{
+    color: #FFF;
+}
 #chat-post1
 {
     display: none;
