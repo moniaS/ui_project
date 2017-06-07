@@ -232,6 +232,10 @@ footer {
     background: none !important;
 }
 
+.navbar-text-item {
+    font-size: 1.7em;
+}
+
 /* GENERIC CLASSES */
 .center {
     margin: 0 auto;
