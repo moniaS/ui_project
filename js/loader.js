@@ -6,34 +6,39 @@ $(document).ready(function() {
             leftSidebarSearchOptionsLoaded();
         });
         $('#block-left-sidebar-group-list').load('../blocks/left-sidebar/group-list.html', function() {
-        });
-        $("#group-math-I").on('click', function () {
-            $('#block-content-homepage').load('../blocks/main-content/group-view/math1.html', function() {
-                $('#block-content-add-new-post').show();
-                $('#block-post-math1').load('../blocks/main-content/posts/math1.html', function () {
-                    postLoaded();
-                });
-                $('#block-post-math2').load('../blocks/main-content/posts/math2.html', function () {
-                    postLoaded();
-                });
+            $("#group-math-I").on('click', function () {
+                $('#block-content-homepage').load('../blocks/main-content/group-view/math1.html', function() {
+                    $('#block-content-add-new-post').load('../blocks/main-content/add-new-post/general.html', function() {
+                        addNewPostLoaded();
+                        prepareAddNewPostOnGroup('Matematyka I');
+                    });
+                    $('#block-content-add-new-post').show();
+                    $('#block-post-math1').load('../blocks/main-content/posts/math1.html', function () {
+                        postLoaded();
+                    });
+                    $('#block-post-math2').load('../blocks/main-content/posts/math2.html', function () {
+                        postLoaded();
+                    });
+                })
+            });
+
+            $("#group-crypto").on('click', function () {
+                $('#block-content-homepage').load('../blocks/main-content/group-view/cryptography.html', function() {
+                    $('#block-content-add-new-post').load('../blocks/main-content/add-new-post/general.html', function() {
+                        addNewPostLoaded();
+                        prepareAddNewPostOnGroup('Kryptografia I');
+                    });
+                    $('#block-content-add-new-post').show();
+                    $('#block-post-crypto1').load('../blocks/main-content/posts/crypto1.html', function () {
+                        postLoaded();
+                    });
+                    $('#block-post-crypto2').load('../blocks/main-content/posts/crypto2.html', function () {
+                        postLoaded();
+                    });
+                })
+
             })
-
-            prepareAddNewPostOnGroup('Matematyka I');
         });
-
-        $("#group-crypto").on('click', function () {
-            $('#block-content-homepage').load('../blocks/main-content/group-view/cryptography.html', function() {
-                $('#block-content-add-new-post').show();
-                $('#block-post-crypto1').load('../blocks/main-content/posts/crypto1.html', function () {
-                    postLoaded();
-                });
-                $('#block-post-crypto2').load('../blocks/main-content/posts/crypto2.html', function () {
-                    postLoaded();
-                });
-            })
-
-            prepareAddNewPostOnGroup('Kryptografia I');
-        })
     });
 
 
@@ -41,7 +46,6 @@ $(document).ready(function() {
     $('#block-content-homepage').load('../blocks/main-content/homepage.html', function() {
         $('#block-content-add-new-post').load('../blocks/main-content/add-new-post/general.html', function() {
             addNewPostLoaded();
-            console.log('zaladowano');
         });
 
         $('#block-content-add-new-post').show();

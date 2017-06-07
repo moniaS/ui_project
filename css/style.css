@@ -84,9 +84,9 @@ footer {
 
 .row.content {height: 450px}
 
-LEFT SIDEBAR
+/*LEFT SIDEBAR*/
 .list-group-sidebar {
-    margin-top: 30px;
+    margin-top: 40px!important;
 }
 
 .list-group-sidebar .panel-heading{
@@ -97,6 +97,10 @@ LEFT SIDEBAR
 
 .list-group-sidebar .nav-tabs{
     border-bottom: none;
+}
+
+.list-group-sidebar .nav-tabs li{
+    width: 50%;
 }
 
 .list-group-sidebar .nav-tabs > .open > a,
@@ -124,7 +128,7 @@ LEFT SIDEBAR
     -webkit-box-shadow: 0 0 10px gray;
     box-shadow: 0 0 10px gray;
     text-align: left;
-    margin: 10px;
+    margin-top: 5px;
 }
 
 .list-group-sidebar .group-header {
@@ -254,7 +258,7 @@ LEFT SIDEBAR
 }
 
 .block-margin-top-bottom-5p {
-    margin: 5px 3px;
+    margin: 6px 3px;
 }
 
 .block-margin-top-20p {
@@ -798,6 +802,7 @@ img.hover-shadow {
 
 h3 {
     padding-left: 9px;
+    margin-top: 23px;
 }
 .right-sidebar {
     margin-top: 40px;
@@ -806,4 +811,8 @@ h3 {
 .add-new-group-href {
     margin-top: 10px;
     margin-left: 3px;
+}
+
+.add-new-post-href {
+    margin-bottom: 10px;
 }

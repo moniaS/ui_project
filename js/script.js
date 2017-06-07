@@ -44,10 +44,8 @@ function postLoaded() {
         element.html(parseInt(element.html(), 10) - 1);
     });
     $('.open-chat-btn').off("click").on("click", function (e) {
-        console.log("pokaz czat");
         var title = $(this).closest(".post-group").find(".post-title").html();
         $('#chat-post1').find('.chat-title').html(title);
-        console.log(title)
         $('#chat-post1').show();
     });
 
@@ -58,7 +56,6 @@ function postLoaded() {
 
 function chatLoaded() {
     $('.chat-close').on("click", function (e) {
-        console.log("KLIK1");
         var element = $(this).closest('#chat-post1');
         element.hide();
     });
@@ -172,8 +169,6 @@ function newEventModalLoaded() {
         } else {
             chosenEventType = eventType.PERSONAL;
         }
-
-        console.log(chosenEventType);
     });
 
     $('#confirm-new-event-btn').on('click', function () {
@@ -301,9 +296,8 @@ function leftSidebarSearchOptionsLoaded() {
             clearInterval(checkExist);
 
             $('#search-input').on('click', function() {
-                $('#block-left-sidebar-calendar-standard').fadeOut(200, function() {
-                    $('#block-left-sidebar-search-options').fadeIn(200);
-                });
+                $('.nav-tabs a[href="#search-tab"]').trigger("click");
+                console.log('powinien byc click')
             });
         }
     }, 100);
@@ -339,7 +333,6 @@ function leftSidebarSearchOptionsLoaded() {
 
             $('[name="seek-what"]').on('change', function() {
                 if (this.checked && this.value == 'seek-what-all') {
-                    console.log($(this).val());
                     $('.js-search-item').fadeIn(200);
                 }
             });
@@ -514,6 +507,7 @@ function notificationSettingsLoaded() {
 
 function prepareAddNewPostOnGroup(groupName) {
     $('#add-new-post-groups').hide().val(groupName);
+    $('#label-add-new-post-groups').hide();
     $('.block-post-empty').html('');
     $('#add-new-post-content').val('');
     $('#add-new-post-tags').tagit("removeAll");
