@@ -810,5 +810,9 @@ h3 {
 }
 
 .add-new-post-href {
-    margin-bottom: 10px;
+    margin-bottom: -10px;
+}
+
+#add-new-post-panel {
+    margin-top: 15px;
 }
