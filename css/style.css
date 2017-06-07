@@ -55,6 +55,10 @@
     margin-top: 5px;
 }
 
+#group-tab .nav-pills > li > a {
+    border-radius: 4px 4px 0 0 ;
+}
+
 /*******************PAGE TEMPLATE - NAVBAR, LEFT/RIGHT SIDEBAR, FOOTER*************************/
 
 body {
@@ -80,9 +84,37 @@ footer {
 
 .row.content {height: 450px}
 
-/*LEFT SIDEBAR*/
+LEFT SIDEBAR
 .list-group-sidebar {
-    height: 530px;
+    margin-top: 30px;
+}
+
+.list-group-sidebar .panel-heading{
+    padding: 5px 5px 0 5px;
+    background: #525252;
+    color: whitesmoke;
+}
+
+.list-group-sidebar .nav-tabs{
+    border-bottom: none;
+}
+
+.list-group-sidebar .nav-tabs > .open > a,
+.list-group-sidebar .nav-tabs > .open > a:hover,
+.list-group-sidebar .nav-tabs > .open > a:focus,
+.list-group-sidebar .nav-tabs > li > a:hover,
+.list-group-sidebar .nav-tabs > li > a:focus {
+    color: #777;
+    background-color: #ddd;
+    border-color: transparent;
+}
+.list-group-sidebar .nav-tabs > li.active > a,
+.list-group-sidebar .nav-tabs > li.active > a:hover,
+.list-group-sidebar .nav-tabs > li.active > a:focus {
+    color: #555;
+    background-color: #fff;
+    border-color: #ddd;
+    border-bottom-color: transparent;
 }
 
 .list-group-sidebar, .sidenav, .post-group {
@@ -117,18 +149,46 @@ footer {
     color: inherit;
 }
 
-.add-group-btn {
-    position: absolute;
-    bottom: 20px;
-    right: 35%;
-    color: #777;
+.nav-pills li {
+    width: 50%;
+    padding-left: 0;
+    background: #525252;
+    color: white;
 }
-.add-group-btn:hover {
+
+.nav-pills>li+li {
+    margin-left: 0;
+    border-radius: 2px;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: black;
+    background: white;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.nav > li > a {
+    padding: 10px 12px;
+}
+
+.href-link {
+    text-align: left;
+    padding-left: 9px;
+}
+
+.href-link:hover {
     cursor: pointer;
 }
 .sidenav {
     margin-top: 20px;
+    padding-top: 2px;
 }
+
+.sidenav h4 {
+    margin-left: 9px;
+}
+
 .add-group-icon {
     margin-top: 20px;
     float: right;
@@ -193,6 +253,10 @@ footer {
     margin-right: 2.0em;
 }
 
+.block-margin-top-bottom-5p {
+    margin: 5px 3px;
+}
+
 .block-margin-top-20p {
     margin-top: 20px;
 }
@@ -200,6 +264,15 @@ footer {
 .block-horizontally-padded-5pc {
     padding-right: 5%;
      padding-left: 5%;
+}
+
+.block-horizontally-padded-10pc {
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.list-group-sidebar h4 {
+    padding-left: 3%;
 }
 
 .act-as-clickable {
@@ -717,4 +790,16 @@ img.hover-shadow {
 .notifications-container .notification-settings-icon {
     position: absolute;
     margin-top: 8px;
+}
+
+h3 {
+    padding-left: 9px;
+}
+.right-sidebar {
+    margin-top: 40px;
+}
+
+.add-new-group-href {
+    margin-top: 10px;
+    margin-left: 3px;
 }

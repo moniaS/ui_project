@@ -1,54 +1,21 @@
-<div class="list-group-sidebar">
-    <div class="list-group-sidebar-header">
-        <div class="row">
-            <div class="col-md-9">
-                <div class="group-header">Grupy</div>
+<div class="list-group-sidebar panel-default panel">
+    <div class="panel-heading">
+        <ul  class="nav nav-tabs">
+
+            <li class="active">
+                <a  href="#group-tab" data-toggle="tab">Moje grupy</a>
+            </li>
+            <li><a href="#search-tab" data-toggle="tab">Wyszukaj</a>
+            </li>
+        </ul>
+    </div>
+
+        <div class="tab-content clearfix">
+            <div class="tab-pane active" id="group-tab">
+                <div id="block-left-sidebar-group-list"></div>
             </div>
-            <div class="col-md-3">
-                <a class="add-group-icon" data-toggle="modal" data-target="#add-new-group-modal">
-                    <i class="fa fa-plus fa-lg"></i>
-                </a>
+            <div class="tab-pane" id="search-tab">
+                <div id="block-left-sidebar-search-options"></div>
             </div>
         </div>
-    </div>
-    </h3>
-    <ul class="nav sidebar-nav">
-        <li>
-            <a href="#">
-                <i class="fa fa-users"></i>
-                Sieciowe Systemy Baz Danych
-            </a>
-        </li>
-        <li id="group-crypto">
-            <a href="javascript:void(0)">
-                <i class="fa fa-users"></i>
-                Kryptografia
-            </a>
-        </li>
-        <li id="group-math-I">
-            <a href="javascript:void(0)">
-                <i class="fa fa-users"></i>
-                Matematyka I
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="fa fa-users"></i>
-                Interfejsy
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="fa fa-users"></i>
-                Grafika
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="fa fa-users"></i>
-                Numerki
-            </a>
-        </li>
-    </ul>
-    <a class="add-group-btn" data-toggle="modal" data-target="#add-new-group-modal">+ Dodaj grupę</a>
 </div>

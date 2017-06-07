@@ -229,9 +229,8 @@ function addNewPostLoaded() {
 
     $('#add-new-post-files').addClass('dropzone');
 
-    $('#add-new-post-btn').on('click', function() {
-        $(this).toggleClass('btn-success');
-        $(this).toggleClass('btn-default');
+    $('#add-new-post-btn').on('click', function(e) {
+        e.preventDefault();
         $('#add-new-post-panel').slideToggle();
     });
 
@@ -285,8 +284,7 @@ function scrollToChatBottom(chatWindowElem) {
 }
 
 /* Search and filters in right sidebar */
-function rightSidebarSearchOptionsLoaded() {
-    $('#block-right-sidebar-search-options').hide();
+function leftSidebarSearchOptionsLoaded() {
 
     $('.search-filters-checkboxes').hide();
 
@@ -299,16 +297,16 @@ function rightSidebarSearchOptionsLoaded() {
             clearInterval(checkExist);
 
             $('#search-input').on('click', function() {
-                $('#block-right-sidebar-calendar-standard').fadeOut(200, function() {
-                    $('#block-right-sidebar-search-options').fadeIn(200);
+                $('#block-left-sidebar-calendar-standard').fadeOut(200, function() {
+                    $('#block-left-sidebar-search-options').fadeIn(200);
                 });
             });
         }
     }, 100);
 
     $('#js-show-calendar').on('click', function() {
-        $('#block-right-sidebar-search-options').fadeOut(200, function() {
-            $('#block-right-sidebar-calendar-standard').fadeIn(200);
+        $('#block-left-sidebar-search-options').fadeOut(200, function() {
+            $('#block-left-sidebar-calendar-standard').fadeIn(200);
         });
     });
 

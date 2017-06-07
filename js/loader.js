@@ -1,6 +1,12 @@
 $(document).ready(function() {
     /* Load left sidebar */
     $('#block-left-sidebar-standard').load('../blocks/left-sidebar/standard.html', function () {
+        /* Load left sidebar */
+        $('#block-left-sidebar-search-options').load('../blocks/left-sidebar/search-options.html', function() {
+            leftSidebarSearchOptionsLoaded();
+        });
+        $('#block-left-sidebar-group-list').load('../blocks/left-sidebar/group-list.html', function() {
+        });
         $("#group-math-I").on('click', function () {
             $('#block-content-homepage').load('../blocks/main-content/group-view/math1.html', function() {
                 $('#block-content-add-new-post').show();
@@ -33,6 +39,11 @@ $(document).ready(function() {
 
     /* Content */
     $('#block-content-homepage').load('../blocks/main-content/homepage.html', function() {
+        $('#block-content-add-new-post').load('../blocks/main-content/add-new-post/general.html', function() {
+            addNewPostLoaded();
+            console.log('zaladowano');
+        });
+
         $('#block-content-add-new-post').show();
 
         $('#block-post-crypto1').load('../blocks/main-content/posts/crypto1.html', function () {
@@ -72,18 +83,11 @@ $(document).ready(function() {
     });
 
 
-    $('#block-content-add-new-post').load('../blocks/main-content/add-new-post/general.html', function() {
-        addNewPostLoaded();
-    });
-
     /* Load right sidebar */
     $('#block-right-sidebar-calendar-standard').load('../blocks/right-sidebar/calendar-standard.html', function() {
         rightSidebarCalendarLoaded();
     });
 
-    $('#block-right-sidebar-search-options').load('../blocks/right-sidebar/search-options.html', function() {
-        rightSidebarSearchOptionsLoaded();
-    });
 
     /* Modals */
     $('#block-modal-add-new-group').load('../blocks/modal/add-new-group.html', function() {
