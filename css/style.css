@@ -271,6 +271,10 @@ LEFT SIDEBAR
     padding-left: 10%;
 }
 
+.block-no-margin-bottom {
+    margin-bottom: 0;
+}
+
 .list-group-sidebar h4 {
     padding-left: 3%;
 }
