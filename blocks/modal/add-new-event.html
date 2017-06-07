@@ -21,20 +21,41 @@
 
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="group">
-                        <input id="group-event-name" class="form-control block-margin-top-em block-margin-bottom-em" type="text" placeholder="Nazwa wydarzenia *"/>
-                        <input id="group-event-group" class="form-control block-margin-bottom-em" type="text" placeholder="Wydarzenie dla grupy *"/>
-                        <input id="group-event-date" class="form-control block-margin-bottom-em js-datepicker" type="text" placeholder="Data wydarzenia *"/>
-                        <input id="group-event-tags" class="form-control block-margin-bottom-em js-tags" type="text"/>
+                        <div class="form-group block-margin-top-em">
+                            <label for="group-event-name">Nazwa wydarzenia *</label>
+                            <input id="group-event-name" class="form-control block-margin-bottom-em" type="text" placeholder="Co to jest za wydarzenie?"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="group-event-group">Wydarzenie dla grupy *</label>
+                            <input id="group-event-group" class="form-control block-margin-bottom-em" type="text" placeholder="Do jakiej grupy chcesz je przypisać?"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="group-event-date">Data wydarzenia *</label>
+                            <input id="group-event-date" class="form-control block-margin-bottom-em js-datepicker" type="text" placeholder="Kiedy ma się ono odbyć?"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="group-event-tags">Tagi</label>
+                            <input id="group-event-tags" class="form-control block-margin-bottom-em js-tags" type="text"/>
+                        </div>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="personal">
-                        <input id="personal-event-name" class="form-control block-margin-top-em block-margin-bottom-em" type="text" placeholder="Nazwa wydarzenia *"/>
-                        <input id="personal-event-date" class="form-control block-margin-bottom-em js-datepicker" type="text" placeholder="Data wydarzenia *"/>
-                        <input id="personal-event-tags" class="form-control block-margin-bottom-em js-tags" type="text"/>
+                        <div class="form-group block-margin-top-em">
+                            <label for="personal-event-name">Nazwa wydarzenia *</label>
+                            <input id="personal-event-name" class="form-control block-margin-bottom-em" type="text" placeholder="Co to jest za wydarzenie?"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="personal-event-date">Data wydarzenia *</label>
+                            <input id="personal-event-date" class="form-control block-margin-bottom-em js-datepicker" type="text" placeholder="Kiedy ma się ono odbyć?"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="personal-event-tags">Tagi</label>
+                            <input id="personal-event-tags" class="form-control block-margin-bottom-em js-tags" type="text"/>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <input type="button" class="btn btn-primary" value="Dodaj" id="confirm-new-event-btn"
+                <input type="button" class="btn btn-success" value="Dodaj" id="confirm-new-event-btn"
                        data-dismiss="modal">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
             </div>
