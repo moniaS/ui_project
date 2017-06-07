@@ -153,6 +153,10 @@ footer {
     color: inherit;
 }
 
+.list-group {
+    margin-bottom: 10px;
+}
+
 .nav-pills li {
     width: 50%;
     padding-left: 0;
@@ -806,7 +810,7 @@ img.hover-shadow {
 
 h3 {
     padding-left: 9px;
-    margin-top: 23px;
+    margin-top: 27px;
 }
 .right-sidebar {
     margin-top: 40px;
@@ -827,4 +831,17 @@ h3 {
 
 .background-grey {
     color: darkgrey;
+}
+
+.right-sidebar hr {
+    margin: 2px 0;
+}
+
+.right-sidebar .date-header {
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.right-sidebar h5 {
+    margin-left: 10px;
 }
