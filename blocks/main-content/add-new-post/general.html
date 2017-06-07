@@ -3,13 +3,22 @@
 </button>
 
 <div id="add-new-post-panel" class="panel panel-default">
-    <div class="panel-body">
+    <div class="panel-body ">
         <form id="add-new-post-form">
-            <textarea id="add-new-post-content" class="form-control block-margin-bottom-em" rows="3"
-                      placeholder="Treść *"></textarea>
-            <input id="add-new-post-tags" class="form-control block-margin-bottom-em" type="text" placeholder="Tagi"/>
-            <input id="add-new-post-groups" class="form-control block-margin-bottom-em" type="text"
-                   placeholder="Grupa *"/>
+            <div class="form-group text-left">
+                <label for="add-new-post-content">Treść *</label>
+                <textarea id="add-new-post-content" class="form-control block-margin-bottom-em" rows="3"
+                          placeholder="Tutaj podaj treść posta, którą chcesz się podzielić"></textarea>
+            </div>
+            <div class="form-group block-margin-top-em text-left">
+                <label for="add-new-post-groups">Grupa *</label>
+                <input id="add-new-post-groups" class="form-control block-margin-bottom-em" type="text"
+                       placeholder="Do jakiej grupy chcesz go dodać?"/>
+            </div>
+            <div class="form-group block-margin-top-em text-left">
+                <label for="add-new-post-tags">Tagi</label>
+                <input id="add-new-post-tags" class="form-control block-margin-bottom-em" type="text"/>
+            </div>
 
             <div class="dz-message" data-dz-message><span>Przeciągnij i upuść tutaj pliki, które chcesz dodać lub kliknij na to pole, aby wybrać je ręcznie</span></div>
             <div id="add-new-post-files"></div>

@@ -6,25 +6,34 @@
                 <h4 class="modal-title">Dodaj nową grupę</h4>
             </div>
             <div class="modal-body">
-                <input id="group-name" class="form-control" type="text" placeholder="Nazwa grupy *"/>
+                <div class="form-group">
+                    <label for="group-name">Nazwa grupy *</label>
+                    <input id="group-name" class="form-control" type="text" placeholder="Ja ma się nazywać nowa grupa?"/>
+                </div>
+
+                <label for="group-icon-name">Wybór ikony</label>
+
+                <p>Możesz wybrać z dysku ikonę, która zostanie przypisana do Twojej grupy. <br/>
+                Jeśli nie chcesz tego robić to podaj skróconą nazwę grupy, na podstawie której zostanie automatycznie
+                wygenerowania ikona grupy.</p>
+
                 <div class="input-group">
-                <span class="input-group-btn">
-                    <span class="btn btn-primary btn-file">
-                        Wybierz ikonę&hellip; <input type="file" single id="group-icon-name">
+                    <span class="input-group-btn">
+                        <span class="btn btn-primary btn-file">
+                            Wybierz ikonę&hellip; <input type="file" single id="group-icon-name">
+                        </span>
                     </span>
-                </span>
-                    <input type="text" class="form-control">
+                        <input type="text" class="form-control">
                 </div>
-                <div class="row">
-                    <div class="col-md-2 col-md-offset-5">lub</div>
+
+                <div class="form-group block-margin-top-em">
+                    <label for="short-group-name">Skrócona nazwa grupy</label>
+                    <input id="short-group-name" type="text" class="form-control" placeholder="Nie może być dłuższa niż 3 znaki"
+                           maxlength="3"/>
                 </div>
-                <input id="short-group-name" type="text" class="form-control" placeholder="Skrócona nazwa grupy"
-                       maxlength="3"/>
-                <i>Ikona zostanie stworzona ze skrótu nazwy</i>
-                <br>
             </div>
             <div class="modal-footer">
-                <input type="button" class="btn btn-primary" value="Dodaj" id="confirm-new-group-btn"
+                <input type="button" class="btn btn-success" value="Dodaj" id="confirm-new-group-btn"
                        data-dismiss="modal">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
             </div>
