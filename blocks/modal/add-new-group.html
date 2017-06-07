@@ -17,20 +17,26 @@
                 Jeśli nie chcesz tego robić to podaj skróconą nazwę grupy, na podstawie której zostanie automatycznie
                 wygenerowania ikona grupy.</p>
 
-                <div class="input-group">
-                    <span class="input-group-btn">
-                        <span class="btn btn-primary btn-file">
-                            Wybierz ikonę&hellip; <input type="file" single id="group-icon-name">
+                <div class="col-xs-6">
+                    <label class="block-no-margin-bottom">Plik</label>
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <span class="btn btn-primary btn-file">
+                                Wybierz<input type="file" single id="group-icon-name">
+                            </span>
                         </span>
-                    </span>
-                        <input type="text" class="form-control">
+                            <input type="text" class="form-control">
+                    </div>
                 </div>
 
-                <div class="form-group block-margin-top-em">
-                    <label for="short-group-name">Skrócona nazwa grupy</label>
-                    <input id="short-group-name" type="text" class="form-control" placeholder="Nie może być dłuższa niż 3 znaki"
-                           maxlength="3"/>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label for="short-group-name">Skrócona nazwa grupy</label>
+                        <input id="short-group-name" type="text" class="form-control" placeholder="Nie może być dłuższa niż 3 znaki"
+                               maxlength="3"/>
+                    </div>
                 </div>
+                <div class="row"></div>
             </div>
             <div class="modal-footer">
                 <input type="button" class="btn btn-success" value="Dodaj" id="confirm-new-group-btn"
