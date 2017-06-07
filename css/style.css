@@ -242,16 +242,28 @@ footer {
 }
 
 /*POSTS*/
-.best-comment {
-    margin: 3px 0 5px 15px;
+.best-comments {
+    padding: 5px 15px 15px 15px;
+    background-color: #F6F6F6;
 }
 
-.post-group {
+.best-comment {
+    margin: 3px 0px 10px 0px;
+    padding-left: 4px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E0E0E0;
+    background-color: #FFFFFF;
+}
+
+.post-group-main {
     padding: 15px;
 }
 
 .open-chat-btn {
     color: #777;
+    float: right;
+
 }
 
 .open-chat-btn:hover {
@@ -267,8 +279,12 @@ footer {
 }
 
 .post-author-name {
-    font-size: 20px;
+    font-size: 16px;
     margin-left: 8px;
+}
+
+.best-comment-author-name {
+    font-size: 14px;
 }
 
 .post-date {
@@ -278,7 +294,37 @@ footer {
 }
 
 .comment-content {
+    font-size: 16px;
+}
+
+.post-group-header {
+    font-size: 14px;
+}
+
+.post-hr {
+    height: 0;
+    max-height: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.post-comments-hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #DDDDDD;
+    margin: 0;
+    padding: 0;
+}
+
+.post-title {
+    font-size: 20px;
+}
+
+.best-comments-header {
     font-size: 12px;
+    color: #666666;
+    margin-bottom: 4px;
 }
 
 /*SHOWING IMAGES*/
