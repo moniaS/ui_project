@@ -820,3 +820,7 @@ h3 {
 #add-new-post-panel {
     margin-top: 15px;
 }
+
+.background-grey {
+    color: darkgrey;
+}
