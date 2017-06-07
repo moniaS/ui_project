@@ -38,10 +38,16 @@ function postLoaded() {
     $('.like-btn').off("click").on("click", function (e) {
         var element = $(this).closest('.row').find('.like-value');
         element.html(parseInt(element.html(), 10) + 1);
+        $(this).find("i").addClass('fa-lg background-grey');
+        $(this).attr('disabled', 'disabled');
+        $(this).off('click');
     });
     $('.dislike-btn').off("click").on("click", function (e) {
         var element = $(this).closest('.row').find('.dislike-value');
         element.html(parseInt(element.html(), 10) - 1);
+        $(this).find("i").addClass('fa-lg background-grey');
+        $(this).attr('disabled', 'disabled');
+        $(this).off('click');
     });
     $('.open-chat-btn').off("click").on("click", function (e) {
         var title = $(this).closest(".post-group").find(".post-title").html();
