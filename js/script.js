@@ -50,6 +50,10 @@ function postLoaded() {
         console.log(title)
         $('#chat-post1').show();
     });
+
+    $('.js-btn-tag-notes').on('click', function() {
+        $('.js-post-not-notes').slideUp(200);
+    });
 }
 
 function chatLoaded() {
