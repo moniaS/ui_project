@@ -87,6 +87,9 @@ function newGroupModalLoaded() {
             var groupName = $("#add-new-group-modal").find("#group-name").val();
             var inputFile = $("#group-icon-name");
             appendRowToGroupsList(inputFile, groupName);
+
+            $('[id^="block-post-"]').hide();
+            $('#page-header').html(groupName);
         })
     });
 
