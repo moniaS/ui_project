@@ -507,6 +507,7 @@ function notificationSettingsLoaded() {
 
 function prepareAddNewPostOnGroup(groupName) {
     $('#add-new-post-groups').hide().val(groupName);
+    $('#label-add-new-post-groups').hide();
     $('.block-post-empty').html('');
     $('#add-new-post-content').val('');
     $('#add-new-post-tags').tagit("removeAll");
