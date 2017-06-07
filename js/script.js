@@ -48,6 +48,10 @@ function postLoaded() {
         $('#chat-post1').find('.chat-title').html(title);
         $('#chat-post1').show();
     });
+
+    $('.js-btn-tag-notes').on('click', function() {
+        $('.js-post-not-notes').slideUp(200);
+    });
 }
 
 function chatLoaded() {
