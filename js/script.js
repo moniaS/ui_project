@@ -38,16 +38,18 @@ function postLoaded() {
     $('.like-btn').off("click").on("click", function (e) {
         var element = $(this).closest('.row').find('.like-value');
         element.html(parseInt(element.html(), 10) + 1);
-        $(this).find("i").addClass('fa-lg background-grey');
+        $(this).find("i").removeClass('background-grey').addClass('fa-lg');
         $(this).attr('disabled', 'disabled');
         $(this).off('click');
+        $(this).closest('.row').find('.dislike-btn').find('i').removeClass('fa-lg').addClass('background-grey');
     });
     $('.dislike-btn').off("click").on("click", function (e) {
         var element = $(this).closest('.row').find('.dislike-value');
         element.html(parseInt(element.html(), 10) - 1);
-        $(this).find("i").addClass('fa-lg background-grey');
+        $(this).find("i").removeClass('background-grey').addClass('fa-lg');
         $(this).attr('disabled', 'disabled');
         $(this).off('click');
+        $(this).closest('.row').find('.like-btn').find('i').removeClass('fa-lg').addClass('background-grey');
     });
     $('.open-chat-btn').off("click").on("click", function (e) {
         var title = $(this).closest(".post-group").find(".post-title").html();
