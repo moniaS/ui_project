@@ -41,7 +41,6 @@ $(document).ready(function() {
     $('#block-content-homepage').load('../blocks/main-content/homepage.html', function() {
         $('#block-content-add-new-post').load('../blocks/main-content/add-new-post/general.html', function() {
             addNewPostLoaded();
-            console.log('zaladowano');
         });
 
         $('#block-content-add-new-post').show();
