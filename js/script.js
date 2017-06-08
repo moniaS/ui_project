@@ -308,7 +308,6 @@ function leftSidebarSearchOptionsLoaded() {
 
             $('#search-input').on('click', function() {
                 $('.nav-tabs a[href="#search-tab"]').trigger("click");
-                console.log('powinien byc click')
             });
         }
     }, 100);
